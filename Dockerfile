@@ -13,7 +13,7 @@
     # Copy application source code
     COPY index.js ./
 
-    # Expose port (default 3001)
+    # Expose port (default 7168)
     EXPOSE 7168
 
     # Define default environment variables

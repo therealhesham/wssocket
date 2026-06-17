@@ -1,7 +1,7 @@
 const { WebSocketServer } = require("ws");
 const http = require("http");
 
-const WS_PORT = process.env.PORT || 3001;
+const WS_PORT = process.env.PORT || 7168;
 const NEXTJS_API_URL = process.env.NEXT_PUBLIC_APP_URL ;
 
 // Map<employeeId, Set<WebSocket>>
