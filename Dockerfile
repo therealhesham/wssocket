@@ -18,6 +18,6 @@
 
     # Define default environment variables
     ENV PORT=7168
-    ENV NEXT_PUBLIC_APP_URL=rentcar.rawaes.com
+    ENV NEXT_PUBLIC_APP_URL=https://rentcar.rawaes.com
     # Start server
     CMD ["node", "index.js"]

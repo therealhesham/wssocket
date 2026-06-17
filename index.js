@@ -2,7 +2,11 @@ const { WebSocketServer } = require("ws");
 const http = require("http");
 
 const WS_PORT = process.env.PORT || 7168;
-const NEXTJS_API_URL = process.env.NEXT_PUBLIC_APP_URL ;
+let NEXTJS_API_URL = process.env.NEXT_PUBLIC_APP_URL || "";
+if (NEXTJS_API_URL && !NEXTJS_API_URL.startsWith("http://") && !NEXTJS_API_URL.startsWith("https://")) {
+  NEXTJS_API_URL = `https://${NEXTJS_API_URL}`;
+}
+
 
 // Map<employeeId, Set<WebSocket>>
 const connectedUsers = new Map();
